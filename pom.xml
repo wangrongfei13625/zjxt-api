@@ -7,10 +7,14 @@
     <artifactId>zjxt-api</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>zjxt-api</name>
+
 
     <modules>
         <module>zjxt-eureka</module><!--注册中心-->
+        <module>zjxt-gatway</module><!--网关-->
+        <module>zjxt-config</module><!--配置中心-->
+        <module>zjxt-member</module>
+
     </modules>
 
     <properties>

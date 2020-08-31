@@ -1,0 +1,33 @@
+#服务端口号
+server:
+  port: 11100
+
+http:
+  eureka:
+    serviceUrl: 127.0.0.1
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${http.eureka.serviceUrl}:8761/eureka/
+
+  instance:
+    prefer-ip-address: true #相互注册时 hostname 使用 IP 地址，同时使用 IP 地址作为eureka.client.service-url.defaultZone的配置值
+
+endpoints:
+restart:
+  enabled: true
+shutdown:
+  enabled: true
+health:
+  sensitive: false
+
+
+zuul:
+  routes:
+    api-member:
+      path: /member/**
+      serviceId: zjxt-member
+      sensitiveHeaders: "*"
+
