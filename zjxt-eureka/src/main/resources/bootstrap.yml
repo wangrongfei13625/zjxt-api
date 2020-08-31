@@ -1,0 +1,3 @@
+spring:
+  appliction:
+    name: zjxt-eureka
